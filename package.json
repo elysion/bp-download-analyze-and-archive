@@ -1,0 +1,12 @@
+{
+  "name": "download-analyze-and-archive",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "ramda": "^0.25.0",
+    "recursive-readdir": "^2.2.1",
+    "bp-downloader": "git://git@github.com:elysion/bp-downloader.git"
+  }
+}
