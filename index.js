@@ -63,7 +63,7 @@ downloadFromBeatport(downloadsDir, credentials, ignoreFile)
   .then(() => new BPromise((resolve, reject) =>
     getDownloadedFilesAndMtimes()
       .tap(() => console.log('Adding tracks in download directory to MixedInKey'))
-     .tap(() => execAsync(`osascript mik.scpt "${downloadsDir}"`))
+     .tap(() => execAsync(`osascript ${__dirname}/mik.scpt "${downloadsDir}"`))
       .then(waitUntilFilesHaveChangedOrMoved(resolve))
   ).timeout(60 * 10 * 1000))
   .tap(() => console.log(`Moving analyzed files to ${archiveDir}`))
